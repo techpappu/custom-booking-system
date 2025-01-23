@@ -1,7 +1,9 @@
 # custom-booking-system
 Custom Booking System
 Custom Booking System is a WordPress plugin designed to provide a simple and efficient booking system. It allows users to book appointments with specific dates and time slots through a user-friendly interface. The plugin includes features such as a booking form, admin management of bookings, and AJAX-based time slot availability checks.
+
 Features
+
 Booking Form: Users can select a date and time slot, and fill out a form with their name, email, and an optional message.
 Admin Management: Admins can view and manage bookings through a custom admin page.
 Time Slot Availability: AJAX handlers ensure that users can only book available time slots, preventing overbooking.
