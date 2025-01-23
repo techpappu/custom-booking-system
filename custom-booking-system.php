@@ -16,7 +16,6 @@ require_once plugin_dir_path(__FILE__) . 'class-booking-list-table.php';
 class CustomBookingSystem {
     public function __construct() {
         register_activation_hook(__FILE__, [$this, 'create_database_table']);
-        register_uninstall_hook(__FILE__, 'custom_booking_system_uninstall');
         // Register shortcode
         add_shortcode('custom_booking_system', [$this, 'render_booking_shortcode']);
         // Enqueue scripts and styles
@@ -170,14 +169,6 @@ class CustomBookingSystem {
         </div>
         <?php
     }
-}
-// Function to clean up on uninstall
-function custom_booking_system_uninstall() {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . 'bookings';
-
-    $wpdb->query("DROP TABLE IF EXISTS $table_name");
 }
 
 
